@@ -45,8 +45,8 @@ terraform destroy
 
 Nota: Antes de iniciar a criação da infraestrutura, certifique-se de que você já tem um Key Pair (Par de chave) na AWS, em caso de dúvida, siga o link para criar um Key Pair: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/create-key-pairs.html
 
-Com os pares de chaves criados, altere a linha 142 no arquivo '**main.tf**' dentro da pasta '**terraform**'. (por exemplo: ‘acesso_terraform’ )
-    > key_name                    = "acesso_terraform" #Adicione sua Key Pairs da AWS aqui!
+Com os pares de chaves criados, altere a linha 4 no arquivo '**ec2.tf**' e adicione o seu key pair.
+    > key_name                    = "user-avanti" #Adicione sua Key Pairs da AWS aqui!
 
 Para executar o aplicativo, simplesmente execute o seguinte comando na pasta "**terraform**":
 
