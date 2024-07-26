@@ -1,4 +1,4 @@
-# Desafio Stone
+# Terraform + AWS + Docker
 
 ## Pré-requisitos:
 
