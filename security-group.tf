@@ -1,6 +1,6 @@
 #Configuração do security group para acesso ssh, http e https
-resource "aws_security_group" "bt-avantiSG" {
-  name        = "bt-avantiSG"
+resource "aws_security_group" "bt-avantiSG-app" {
+  name        = "bt-avantiSG-app"
   description = "Allow incoming HTTP, HTTPS e SSH connections."
 
   #Inbound
@@ -16,22 +16,6 @@ resource "aws_security_group" "bt-avantiSG" {
     description = "HTTP to EC2"
     from_port   = 80
     to_port     = 80
-    protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
-  }
-
-  ingress {
-    description = "APP Comentarios to EC2"
-    from_port   = 8080
-    to_port     = 8080
-    protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
-  }
-
-  ingress {
-    description = "APP Candidato to EC2"
-    from_port   = 3000
-    to_port     = 3000
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
@@ -53,6 +37,6 @@ resource "aws_security_group" "bt-avantiSG" {
   }
 
   tags = {
-    Name = "bt-avantiSG"
+    Name = "bt-avantiSG-app"
   }
 }
