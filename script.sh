@@ -9,4 +9,4 @@ sudo systemctl enable --now docker
 sudo systemctl start docker
 
 cd /home
-git clone git@github.com:raphavidall/bt-dvp-terraform-docker.git
+git clone https://github.com/raphavidall/bt-dvp-terraform-docker.git
